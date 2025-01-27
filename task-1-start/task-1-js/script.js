@@ -180,11 +180,18 @@ function custonNewBoxCreate(parent){
 }
 
 for (let i = 0; i < 10; i++){
-    
+    for (let j = 0; j < 10; j++){
+        let returnedDiv = custonNewBoxCreate(document.getElementById("new-grid"));
+        returnedDiv.style.top = `${i * 40}px`; 
+        returnedDiv.style.left = `${j * 40}px`;
+    }
 }
 
+let testDiv = document.querySelectorAll(".testDiv");
+console.log(testDiv.length);
+
 /***EXPLANATION::
- * 
+ * It displays the total amount of rows and columns that are inside of the nested for loop (10 * 10 = 100). This will display a 10 x 10 grid.
  * 
  */
 
@@ -203,10 +210,30 @@ for (let i = 0; i < 10; i++){
     when dividing by three. */
 
 /***CODE */
+for (let i = 0; i < 10; i++){
+    for (let j = 0; j < 10; j++){
+        let returnedDiv2 = custonNewBoxCreate(document.getElementById("new-grid-three"));
+        returnedDiv2.style.top = `${i * 40}px`; 
+        returnedDiv2.style.left = `${j * 40}px`;
 
+        if (j % 3 === 0){
+            returnedDiv2.style.background = "red";
+            returnedDiv2.textContent = "0";
+        }
+        else if (j % 3 === 1){
+            returnedDiv2.style.background = "orange";
+            returnedDiv2.textContent = "1";
+        }
+        else if (j % 3 === 2){
+            returnedDiv2.style.background = "yellow";
+            returnedDiv2.textContent = "2";
+        }
+    }
+}
 
 /***EXPLANATION::
- * 
+ * Similar to the first grid boxes, but now it is calling each column to sort itself into 3s, and to assign each assorted column 
+ * its corresponding number and colour, and to continue the pattern if there are any remainders left over.
  * 
  */
 
