@@ -157,6 +157,34 @@ body{
   border-width: 4px;
 }
 
+/*CSS TEAM D**/
+.TEAM_D_box {
+  width: 80px;
+  height: 32px;
+  background-color: rgb(34, 29, 41);
+  position: absolute;
+  color: white;
+  text-align: center;
+  padding-top: 8px;
+  font-size: 14px;
+  margin: 1px;
+}
+
+.TEAM_D_box:hover {
+  background-color: rgb(30, 168, 223);
+  cursor: pointer;
+}
+
+.TEAM_D_circle {
+  border-radius: 10px;
+  ;
+  background-color: rgb(223, 30, 117);
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 30px;
+}
+
 .TEAM_D_ANI_C_Div {
   display: inline-block;
   margin: 5px;
