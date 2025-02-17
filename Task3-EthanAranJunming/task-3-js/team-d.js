@@ -435,6 +435,7 @@ const mapNumRange = (num, inMin, inMax, outMin, outMax) =>
       //SAMPLE KEY CHECK (you do not have to use)
       if (e.code === "Space") {
         console.log("d-space down")
+        e.preventDefault(); //Removes any default behaviour (Spacebar scrolling down the page, etc.)
         let newCircle = document.createElement("span");
         let randomSelection = Math.floor(Math.random() * randomCircles.length);
 
