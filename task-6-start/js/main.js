@@ -95,16 +95,46 @@ function run() {
 
   /****** PART D:: VISUALIZE  */
   function runPartD(new_sentence) {
-    const output = document.getElementById("output");
-    output.style.display = "block";
-    output.innerHTML = "";
-    new_sentence.split("").forEach((char, index) => {
+    let outputDiv = document.querySelector("#output");
+    outputDiv.style.display = "block";
+    outputDiv.innerHTML = "";
+    // new_sentence.split("").forEach((char, index) => {
+    //   let span = document.createElement("span");
+    //   span.textContent = char;
+    //   span.style.color = randomColor();
+    //   span.style.fontSize = `${Math.floor(Math.random() * 20) + 20}px`;
+    //   output.appendChild(span);
+    // })
+    let delay = 0;
+    for (let i = 0; i < new_sentence.length; i++) {
       let span = document.createElement("span");
+      let char = new_sentence[i];
+
       span.textContent = char;
       span.style.color = randomColor();
-      span.style.fontSize = `${Math.floor(Math.random() * 20) + 20}px`;
-      output.appendChild(span);
-    })
+      span.style.fontSize = `${Math.random() * 20 + 15}px`;
+      span.style.fontWeight = Math.random() > 0.5 ? "bold" : "normal";
+      span.style.opacity = "0";
+      span.style.transition = "opacity 0.5s ease-in-out, transform 0.3s ease-in-out";
+      span.style.display = "inline-block";
+
+      // Add hover effect
+      span.addEventListener("mouseover", function () {
+        this.style.transform = "scale(1.5) rotate(10deg)";
+        this.style.transition = "transform 0.2s ease-in-out";
+      });
+      span.addEventListener("mouseout", function () {
+        this.style.transform = "scale(1) rotate(0)";
+      });
+
+      outputDiv.appendChild(span);
+
+      setTimeout(() => {
+        span.style.opacity = "1";
+      }, delay);
+
+      delay += 100;
+    }
   }
 
   /****** PART E:: RESET  */
