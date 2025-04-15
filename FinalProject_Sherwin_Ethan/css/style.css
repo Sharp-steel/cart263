@@ -1,6 +1,5 @@
 body {
-  font-family: Arial, sans-serif;
-  background: #f0f0f0;
+  background:url('../assets/images/backgroundImage.gif');
   margin: 0;
   padding: 20px;
   min-height: 100vh;
@@ -10,8 +9,13 @@ body {
 }
 
 h1{
-  font-family: 'DM Serif Text', sans-serif;
-  font-size: 60px;
+  font-family: "Pixelify Sans", sans-serif;
+  font-size: 50px;
+}
+
+h2{
+  font-family: 'PixelPKMN';
+  font-size: 20px;
 }
 
 p{
@@ -20,8 +24,9 @@ p{
   margin-bottom: 25px;
 }
 
+
 .container {
-  background: white;
+  background: rgba(255, 255, 255, 0.6);
   border-radius: 10px;
   padding: 40px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -34,7 +39,7 @@ p{
 }
 
 #start-btn {
-  background: #547db9;
+  background: #238396;
   font-family: "Jersey 15", sans-serif;
   font-size: 40px;
   transition: background 0.3s ease, transform 0.3s ease;
@@ -46,16 +51,16 @@ p{
 }
 
 #start-btn:hover {
-  background: #426ba8;
+  background: #1b616f;
   transform: scale(1.25);
 }
 
 .question {
-  font-size: 40px;
+  font-size: 50px;
   margin-top: 45px;
   margin-bottom: 25px;
   line-height: 1.4;
-  font-family: 'DM Serif Text', sans-serif;
+  font-family: "Jersey 15", sans-serif;
   font-weight: bold;
   color: #333;
   text-align: center;
@@ -65,12 +70,12 @@ p{
   display: grid;
   gap: 15px;
   margin-bottom: 20px;
-  font-family: "Funnel Display", sans-serif;
+  font-family: 'PixelPKMN';
 }
 
 .option {
   padding: 15px;
-  border: 1px solid #ddd;
+  background: #e2f2f6;
   border-radius: 5px;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -78,7 +83,7 @@ p{
 }
 
 .option:hover {
-  background: #547db9;
+  background: #1b616f;
   color: white;
   transform: scale(1.05);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
@@ -97,7 +102,7 @@ p{
 }
 
 .next-btn {
-  background: #547db9;
+  background: #238396;
   font-family: "Jersey 15", sans-serif;
   font-size: 30px;
   transition: background 0.3s ease, transform 0.3s ease;
@@ -114,7 +119,7 @@ p{
 }
 
 .next-btn:hover {
-  background: #426ba8;
+  background: #13505c;
   transform: scale(1.25);
 }
 
@@ -138,6 +143,29 @@ p{
   color: black;
 }
 
+
+.reset-btn {
+  background: #238396;
+  font-family: "Jersey 15", sans-serif;
+  font-size: 30px;
+  transition: background 0.3s ease, transform 0.3s ease;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 50%;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.reset-btn:hover {
+  background: #1b616f;
+  transform: scale(1.25);
+}
+
 #quiz-screen {
   display: none;
 }
@@ -145,7 +173,7 @@ p{
 #timer-text {
   font-family: "Jersey 15", sans-serif;
   font-size: 50px;
-  color: #333;
+  color: white;
 }
 
 
@@ -160,10 +188,10 @@ p{
   position: relative;
   width: 80px;
   height: 300px;
-  border: 3px solid #444;
+  border: 3px solid #1b2e3a;
   border-radius: 30px;
   overflow: hidden;
-  background-color: #e0f7fa;
+  background-color: #e2f2f6;
   box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -172,7 +200,7 @@ p{
   bottom: 0;
   width: 100%;
   height: 0%;
-  background: linear-gradient(to top, #2196f3, #03a9f4);
+  background: linear-gradient(to top, #9cd9ec, #0d4a56);
   transition: height 0.6s ease;
   animation: wave 2s infinite linear;
   border-radius: 0 0 30px 30px;
@@ -186,4 +214,9 @@ p{
   100% {
     background-position-x: 100px;
   }
+}
+
+@font-face {
+  font-family: 'PixelPKMN';
+  src: url('../assets/fonts/PKMN RBYGSC.ttf');
 }

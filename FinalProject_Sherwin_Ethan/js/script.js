@@ -43,7 +43,7 @@ const questions = [
     },
     {
         question: "Guess The Video Game Logo",
-        options: ["Portal 1", "Skyrim", "Quake", "Persona 5"],
+        options: ["Portal 1", "Skyrim", "Elden Ring", "Persona 5"],
         correct: 1,
         image: "assets/images/Skyrim.png"
         // https://logowik.com/skyrim-vector-logo-8361.html
@@ -241,10 +241,11 @@ function loadNextQuestion() {
     if (currentQuestion < questions.length) {
         loadQuestion();
     } else {
-        // Show the completion screen
         quizScreen.innerHTML = `
-            <h2>Congratulations! You have completed the quiz.</h2>
-            <p>Thank you for playing!</p>
+            <h1>CONGRATULATIONS! You Have Completed The Quiz.</h1>
+            <h2>Your Score: <span style="color:rgb(46, 128, 145);">${correctCount}</span> out of 
+            <span style="color:rgb(14, 72, 83);">${questions.length}</span></h2>
+            <h2>Thank you for playing!</h2>
         `;
     }
 }
